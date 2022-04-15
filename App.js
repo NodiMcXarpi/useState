@@ -6,13 +6,15 @@ export default function App() {
   const [oxe, setOxe]=useState('vish')
   const [sd9, setSd9]=useState('Ela quer mi da di quatu')
   const [baseado, setPica]=useState('ela acende o baseaduuu')
-  let n1 = 10
+  const [number, setNumber]=useState(10)
   const oxente=()=>{
     console.log('oxi mainha')
   }
  
   return (
    <>
+   <p>{number}</p>
+   <button onClick={()=>setNumber(number + 15)}>Soma 10</button>
     <h1>{sd9}</h1>
     <button onClick={()=>setSd9('eu quero ela por cimaaaaa')}>Por cimAAAaaaAAA</button>
    <p>Valor do state num: {num}</p>
