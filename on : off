@@ -1,0 +1,27 @@
+//INTERAÇÕES COM IMAGENSS, EM JSS:
+import React, {useState} from 'react'
+import './App.css'
+
+//Antes de tudo, importe as imagens e faça o teste
+import ledVerde from './componentes/ledverde.png'
+import redLed from './componentes/redled.png'
+
+
+//crie uma função que denominará a operação termária
+
+export default function App() {
+
+  const [on, setOn]=useState(false)
+ 
+  //depois é só condicionar as funções e os elementos criados
+
+  return (
+   <>
+   
+   
+   <img style={{width:'200px'}} src={on? ledVerde : redLed}/>
+   <button onClick={()=>setOn(!on)}>{on? 'Turn Off' : 'Turn On'}</button>
+   </>
+  );
+}
+
