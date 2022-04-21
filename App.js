@@ -30,3 +30,34 @@ export default function App() {
   );
 }
 
+O mesmo método também pode ser aplicado em strings, com o mesmo padrão de code, ex:
+
+import React, {useState} from 'react'
+import './App.css';
+import Clock from './clock'
+
+
+
+export default function App() {
+  const [num, setNum]=useState(10)
+  const [cincao, setCincaum]=useState(5)
+  const [impact, doMeuSaco]=useState('É o impacto do meu saco')
+  const [igreja, favela]=useState('to vendo a igreja da penha')
+
+  return (
+   <>
+   <p>{impact}</p>
+   <button onClick={()=>doMeuSaco(impact + ' batendo na bunda dela')}>impacto</button>
+ <p>{igreja}</p>
+ <button onClick={()=>favela(igreja + ' bem do alto da favela, com a mais cachorra da favela')}>c quem?</button>
+ <h1><Clock/></h1>
+  <p>{new Date().toLocaleTimeString()}</p>
+   <p>{cincao}</p>
+   <button onClick={()=>setCincaum(cincao + 5)}>Toma cincaum</button>
+
+
+   
+   </>
+  );
+}
+
