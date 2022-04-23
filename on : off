@@ -25,3 +25,34 @@ export default function App() {
   );
 }
 
+//RENDERIZANDO UMA OPERAÇÃO TERMÁRIA
+import React,{useState} from 'react'
+import './App.css'
+
+
+
+
+export default function App() {
+
+  const [log, setLog]=useState(false)
+  const msglog=()=>{
+    return 'Usuário logado'
+  }
+  const msglout=()=>{
+    return 'Loga aí, amigão, por gentileza, namoralzinha'
+  }
+  
+
+
+
+  return (
+   <>
+   <p>{log?msglog() : msglout()}</p>
+   <button onClick={()=>setLog(!log)}>{log? 'Logoff' : 'login'}</button>
+  
+   </>
+  );
+}
+
+
+
