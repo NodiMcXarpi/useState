@@ -1,0 +1,62 @@
+//FUNÇÃO MAP
+import React from 'react'
+import './App.css'
+
+
+
+
+export default function App() {
+
+  const carros = ['HRV', 'Golf', 'Focus', 'Cruze', 'Argo']
+  const carList = carros.map(
+    (c, i)=>
+    <li key={i}>{i} - {c}</li> 
+
+    
+  )
+  
+//a função retornará os itens do array separadamente e organizadamente
+
+  return (
+   <>
+   
+   
+  <ul>{carList}</ul>
+   </>
+  );
+}
+
+//Que também pode ser usado para manipular itens em formato json(também é interessante pra manipular elementos similares)
+import React from 'react'
+import './App.css'
+
+
+
+
+export default function App() {
+
+  const carros = [
+    {categoria: 'Esporte', preco: '110.000', modelo:'Golf GTI 2020'},
+    {categoria: 'Esporte', preco: '180.000', modelo:'Ecosport 2022'},
+    {categoria: 'SUV', preco: '170.000', modelo:'Porsche'},
+    {categoria: 'SUV', preco: '150.000', modelo:'Land Hover'},
+    {categoria: 'Elétrico', preco: '210.000', modelo:'Tesla 2022'}
+  ]
+  const carList = carros.map(
+    (c, i)=>
+    <li key={i}>{i} - {c.modelo} - {c.preco} - {c.categoria}</li> 
+
+    
+  )
+  
+
+
+  return (
+   <>
+   
+   
+  <ul>{carList}</ul>
+   </>
+  );
+}
+
