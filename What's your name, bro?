@@ -1,0 +1,64 @@
+//Manipulando dados passados no input, usando useState
+import './App.css'
+
+
+
+
+export default function App() {
+  const [name, setName]=useState('')
+
+ 
+  
+
+
+  return (
+   <>
+   
+   
+  <label>Type your name</label>
+  <input 
+  type= 'text'
+   name='fname'
+   value={name}
+   onChange={(e)=>setName(e.target.value)}></input>
+  <p>Nome digitado: {name}</p>
+   </>
+  );
+}
+
+Que também pode ser escrito como:
+
+
+import React, {useState} from 'react'
+import './App.css'
+
+
+
+
+
+export default function App() {
+  const [name, setName]=useState(' ')
+  const hanleChangeName =(e)=>{
+    setName(e.target.value)
+  }
+
+ 
+  
+
+
+  return (
+   <>
+   
+   
+  <label>Type your name</label>
+  <input 
+  type= 'text'
+   name='fname'
+   value={name}
+   onChange={(e)=>hanleChangeName(e)}></input>
+  <p>Nome digitado: {name}</p>
+   </>
+  );
+}
+
+//O importante é saber como e onde usar os parâmetros nativos do js de maneira correta
