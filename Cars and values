@@ -1,4 +1,3 @@
-//Manipulando dados passados no select, usando useState e value
 import React, {useState} from 'react'
 import './App.css'
 
@@ -30,8 +29,8 @@ export default function App() {
   <label>Selecione um carro</label>
   <select value={car} onChange={(e)=>setCar(e.target.value)}>
   <option value='Pra pegar mulher nível expert'>A pé</option>
-    <option value='HRV'>HRV</option>
-    <option value='F'>Carro dos Flinstones</option>
+    <option value='Nave das Brabas'>HRV</option>
+    <option value='Iabadabaduuuu'>Carro dos Flinstones</option>
     <option value='Tesla boladão, meu sonho de consumo'>Tesla</option>
     <option value='Idea, nunca vi tirando onda c ele'>Idea</option>
     <option value='Fusquinha de cria, ainda da pra agredir o amigo'>Fuscar</option>
@@ -40,4 +39,3 @@ export default function App() {
    </>
   );
 }
-
